@@ -1,0 +1,1116 @@
+/* * HTML5 Boilerplate * * What follows is the result of much research on cross-browser styling. * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal, * Kroc Camen, and the H5BP dev community and team. */
+/* ========================================================================== Base styles: opinionated defaults ========================================================================== */
+html, button, input, select, textarea {
+    color: #222;
+}
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+/* * Remove text-shadow in selection highlight: h5bp.com/i * These selection declarations have to be separate. * Customize the background color to match your design. */
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+/* * A better looking default horizontal rule */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+/* * Remove the gap between images and the bottom of their containers: h5bp.com/i/440 */
+img {
+    vertical-align: middle;
+}
+/* * Remove default fieldset styles. */
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+/* * Allow only vertical resizing of textareas. */
+textarea {
+    resize: vertical;
+}
+/* ========================================================================== Chrome Frame prompt ========================================================================== */
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+/* ========================================================================== Author's custom styles ========================================================================== */
+* {
+    padding:0;
+    margin:0;
+}
+h1 {
+    padding:0;
+    margin:0;
+}
+a {
+    color:#ff0084;
+    text-decoration:none;
+}
+a:hover {
+    color:#666;
+}
+.clear {
+    clear:both;
+}
+@font-face {
+   /* first for IE 6/7/8 */
+    font-family:'ProximanovaBold';
+    src:url('../fonts/proximanova-bold-webfont.eot');
+}
+@font-face {
+   /* for Mozilla browsers ->Firefox */
+    font-family:'ProximanovaBold';
+    src:local('proximanova-bold-webfont'),url('../fonts/proximanova-bold-webfont.woff') format('woff');
+}
+@font-face {
+   /* first for IE 6/7/8 */
+    font-family:'ProximanovaBoldIta';
+    src:url('../fonts/proximanova-boldit-webfont.eot');
+}
+@font-face {
+   /* for Mozilla browsers ->Firefox */
+    font-family:'ProximanovaBoldIta';
+    src:local('proximanova-boldit-webfont'),url('../fonts/proximanova-boldit-webfont.woff') format('woff');
+}
+@font-face {
+   /* first for IE 6/7/8 */
+    font-family:'Proximanovat';
+    src:url('../fonts/proximanova-regular-webfont.eot');
+}
+@font-face {
+   /* for Mozilla browsers ->Firefox */
+    font-family:'Proximanova';
+    src:local('proximanova-regular-webfont'),url('../fonts/proximanova-regular-webfont.woff') format('woff');
+}
+@font-face {
+   /* first for IE 6/7/8 */
+    font-family:'ProximanovatIta';
+    src:url('../fonts/proximanova-regitalic-webfont.eot');
+}
+@font-face {
+   /* for Mozilla browsers ->Firefox */
+    font-family:'ProximanovatIta';
+    src:local('proximanova-regitalic-webfont'),url('../fonts/proximanova-regitalic-webfont.woff') format('woff');
+}
+@font-face {
+   /* first for IE 6/7/8 */
+    font-family:'ProximanovatLight';
+    src:url('../fonts/proximanova-light-webfont.eot');
+}
+@font-face {
+   /* for Mozilla browsers ->Firefox */
+    font-family:'ProximanovatLight';
+    src:local('proximanova-light-webfont'),url('../fonts/proximanova-light-webfont.woff') format('woff');
+}
+@font-face {
+   /* first for IE 6/7/8 */
+    font-family:'ProximanovatLightIta';
+    src:url('../fonts/proximanova-lightitalic-webfont.eot');
+}
+@font-face {
+   /* for Mozilla browsers ->Firefox */
+    font-family:'ProximanovatLightIta';
+    src:local('proximanova-lightitalic-webfont'),url('../fonts/proximanova-lightitalic-webfont.woff') format('woff');
+}
+body {
+    background:#fff;
+    font-family:Proximanova,arial;
+}
+.partofburst {
+   width:75px;
+    height:75px;
+   position: fixed;
+    bottom:0;
+    right:0;
+    z-index:10;
+    background:url(../img/burst_webtab.png);
+}
+.partofburst a {
+   width:65px;
+    height:40px;
+    display: block;
+    font-size:1px;
+    text-indent:-99999px;
+    position: fixed;
+    bottom:0;
+    right:0;
+}
+.grayfix {
+   background:#E7E7E7 url(../img/sprites.png) top center no-repeat;
+    width:100%;
+    height:94px;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+}
+.header {
+   height: 97px;
+    width:100%;
+    background:url(../img/header-bg.png) bottom repeat-x;
+}
+.header .holder {
+   width:1112px;
+    height:97px;
+    position: relative;
+    margin: auto;
+    width:980px;
+    height: 97px;
+   background: url(../img/sprites.png) no-repeat -55px 0;
+}
+.header .logo {
+   background: url(../img/sprites.png) no-repeat 0 -112px;
+    width: 174px;
+    height: 95px;
+    position: absolute;
+    left:50%;
+    right:50%;
+    margin-left:-89px;
+    top:12px;
+    z-index: 2;
+}
+.header .logo a {
+   display: block;
+    width:100%;
+    height:100%;
+    font-size: 1px;
+    color:#fff;
+    text-indent: -99999px;
+}
+.header .menu {
+   position: absolute;
+}
+.header .menu ul {
+   list-style: none;
+}
+.header .menu a {
+   font-size: 17px;
+    text-transform: uppercase;
+    color:#575757;
+    font-weight: normal;
+    font-family: ProximanovaBold;
+    display: block;
+    height:29px;
+    padding-left:10px;
+    padding-right:10px;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+.header .menu li {
+   float:left;
+}
+.header .menu .selected {
+   background:#fa08b2;
+    color:#fff;
+}
+.header .one {
+   top:25px;
+    left:40px;
+}
+.header .two {
+   top:25px;
+    right:0px;
+    width:432px;
+}
+.header .search {
+   position:absolute;
+   bottom:-18px;
+    right:23px;
+    width:206px;
+   height:37px;
+   background:url(../img/sprites.png) no-repeat 0 -265px;
+    z-index: 1
+}
+.header .search .textInput {
+   width:150px;
+   height:100%;
+   background:none;
+   border:none;
+   padding-left:10px;
+   font-size:10px;
+   color:#666;
+   position:absolute;
+   left:0;
+    text-align: center;
+}
+.header .search .searchNormal {
+   position:absolute;
+   right:0;
+   top:0;
+   width:40px;
+   height:37px;
+   display:block;
+   font-size:1px;
+   text-indent:-9999px;
+   overflow:hidden;
+}
+.header .search .searchNormal:hover {
+   background: url(../img/sprites.png) no-repeat -393px -265px;
+}
+.header .social {
+   position: absolute;
+    left:15px;
+    bottom:-13px;
+    z-index: 1
+}
+.header .social ul {
+   list-style: none;
+    margin: 0;
+    padding:0;
+    margin: 0;
+}
+.header .social li {
+   float:left;
+    margin-right:14px;
+}
+.header .social a {
+   display: block;
+    font-size:1px;
+    color:#000;
+    text-indent: -99999px;
+}
+.header .social .twitter a {
+   background: url(../img/sprites.png) no-repeat 0 -228px;
+    width: 26px;
+    height: 21px;
+}
+.header .social .facebook a {
+   background: url(../img/sprites.png) no-repeat -40px -227px;
+    width: 12px;
+    height: 23px;
+}
+.header .social .pinterst a {
+   background: url(../img/sprites.png) no-repeat -68px -225px;
+    width: 24px;
+    height: 24px;
+}
+.header .social .twitter a:hover {
+   background: url(../img/sprites.png) no-repeat -110px -228px;
+    width: 26px;
+    height: 21px;
+}
+.header .social .facebook a:hover {
+   background: url(../img/sprites.png) no-repeat -150px -227px;
+    width: 12px;
+    height: 23px;
+}
+.header .social .pinterst a:hover {
+    background: url(../img/sprites.png) no-repeat -178px -225px;
+    width: 24px;
+    height: 24px 
+}
+.wrapper {
+    background:#fff;
+    width:980px;
+    margin:auto;
+    position:relative;
+    padding-bottom: 33px;
+}
+.ad728 {
+    width:100%;
+    padding-top:22px;
+    padding-bottom:22px;
+}
+.ad728 .ad {
+    width:728px;
+    height:90px;
+    margin:auto;
+    background:#eee;
+    overflow:hidden;
+    border:#F3F1EF solid 1px;
+}
+.ad300 {
+    width:300px;
+    height:250px;
+    overflow:hidden;
+    background:#eee;
+    border:#F3F1EF solid 1px;
+}
+.wrapper .guts {
+    width:960px;
+    margin:auto;
+}
+.wrapper .guts .left {
+    width:634px;
+    float:left;
+}
+.wrapper .guts .right {
+    width:300px;
+    float:right;
+}
+.slider {
+    width:634px;
+    height:355px;
+    position:relative;
+    border:#F3F1EF solid 1px;
+    z-index: 1;
+}
+.slider ul {
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+.slider h1 {
+    font-family:ProximanovatLightIta;
+    font-weight:normal;
+    color:#fff;
+    font-size:27px;
+    margin:0;
+    padding:0;
+    width:90%;
+    line-height: 28px;
+    margin-top: 11px;
+}
+.slider .link {
+    display:block;
+    width:100%;
+    height:94%;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:3;
+}
+.slider .img {
+    width:634px;
+    height:355px;
+}
+.slider .item {
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.slider .item .sub {
+    width:634px;
+    height:140px;
+    background:url(../img/shade.png);
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:2;
+}
+.slider .item .sub .content {
+    padding:10px;
+    width:100%;
+    height:100%;
+}
+.slider .item .sub p {
+    color:#fff;
+    font-size:12px;
+    margin:0;
+    padding-top:5px;
+}
+.slider .item small {
+    font-size:10px;
+    color:#fff;
+    padding-top:15px;
+    display:block;
+}
+.slider .cat {
+    display: block;
+    position: absolute;
+    bottom:40px;
+    right:15px;
+    background:#fa08b2;
+    padding:2px;
+    color:#fff;
+    font-size:9px;
+    text-transform: uppercase;
+    font-family:ProximanovaBold;
+    font-weight:normal;
+    letter-spacing: 1px;
+    line-height: 10px 
+}
+.featuredArticle {
+    margin-top:27px;
+    position:relative;
+    width:100%;
+    height:64px;
+    max-height:64px;
+    border-top:#dbdbdb solid 3px;
+    border-bottom:#dbdbdb solid 3px;
+}
+.featuredArticle .slides_container {
+    width:420px;
+    height:64px;
+    overflow:hidden;
+    position:absolute;
+    left:170px;
+    top:18px;
+}
+.featuredArticle .slides_container a {
+    text-decoration:none;
+    color:#000;
+    display:block;
+    width:430px;
+    height:100%;
+    text-align:left;
+    font-family:ProximanovatLightIta;
+    font-weight:normal;
+    font-size: 20px;
+}
+.featuredArticle .slides_container a:hover {
+    color:#666;
+}
+.featuredArticle .featureLogo {
+    background:url(../img/sprites.png) no-repeat -284px -404px;
+    width: 139px;
+    height: 138px;
+    position:absolute;
+    top:-50px;
+    left:-20px;
+}
+.featuredArticle .prev {
+    position:absolute;
+    display:block;
+    top:19px;
+    left:135px;
+    background:url(../img/sprites.png) no-repeat -20px -374px;
+    height:20px;
+    width:14px;
+    text-indent:-99999px;
+    z-index:10;
+}
+.featuredArticle .prev:hover {
+    background:url(../img/sprites.png) no-repeat -69px -374px;
+}
+.featuredArticle .next {
+    position:absolute;
+    display:block;
+    top:19px;
+    right:10px;
+    background:url(../img/sprites.png) no-repeat 0 -374px;
+    height:20px;
+    width:14px;
+    text-indent:-99999px;
+    z-index:10;
+}
+.featuredArticle .next:hover {
+    background:url(../img/sprites.png) no-repeat -49px -374px;
+}
+.featuredArticle2 li {
+    position:relative;
+    left:10px;
+    display:block;
+}
+.featuredArticle .featureLogo ul {
+    margin:10px 0 0 7px;
+    padding:0;
+    list-style:none;
+}
+.featuredArticle .featureLogo li {
+    font-family:ProximanovaBold;
+    font-weight:normal;
+    color:#fff;
+    font-size:15px;
+    text-transform:uppercase;
+    line-height:18px 
+}
+.featuredArticle .featureLogo span {
+    font-family:Proximanova !important;
+}
+.featuredArticle h1 {
+    font-family:ProximanovaBold;
+    font-weight:normal;
+    color:#343434;
+    font-size:14px;
+    text-align:center;
+    line-height:23px;
+    height:40px;
+    position: absolute;
+    top:0;
+}
+.articleListing {
+    width:100%;
+    margin-top:27px;
+    margin-bottom:27px;
+}
+.articleListing a {
+    color:#000;
+    text-decoration:none;
+}
+.articleListing a:hover {
+    color:#666;
+}
+.articleListing ul {
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+    list-style:none;
+    padding:15px;
+}
+.articleListing li {
+    width:100%;
+    height:196px;
+    position:relative;
+    margin-bottom:27px;
+}
+.articleListing .image {
+    position:absolute;
+    top:0;
+    left:0;
+    width:222px;
+    height:196px;
+    background:#666;
+}
+.articleListing .image .img {
+    width:100%;
+    height:100%;
+}
+.articleListing .sub {
+    width:100%;
+    height:25px;
+    position:absolute;
+    bottom:0;
+    left:0;
+    z-index:2;
+    background:url(../img/shade-pink.png);
+    text-align:center;
+    text-transform:uppercase;
+    color:#fff;
+    font-size:15px;
+    font-family:ProximanovaBold;
+    font-weight:normal;
+    line-height:26px 
+}
+.articleListing .data {
+    height:100%;
+    width:361px;
+    position:absolute;
+    top:0;
+    right:0;
+}
+.articleListing .data h1 {
+    font-family:ProximanovatIta;
+    font-weight:normal;
+    line-height:21px;
+    color:#000;
+    font-size:24px;
+    text-transform:uppercase;
+}
+.articleListing .data p {
+    font-size:12px;
+}
+.articleListing .data small {
+    font-size:11px;
+    position:absolute;
+    bottom:0;
+}
+.articleListing .data small a {
+    font-family:ProximanovaBold;
+    font-weight:normal;
+    color:#000;
+}
+.articleListing .data small a:hover {
+    color:#666;
+}
+.articleListing .last {
+    margin-bottom:0px;
+}
+.nextPageBar p, .vidNextPageBar p {
+    text-align:center;
+    border:none;
+    padding:0px;
+    margin:0px;
+}
+.vidNextPageBar small {
+    line-height:10px;
+}
+.nextPageBar a:link, .nextPageBar a:visited, .vidNextPageBar a:link, .vidNextPageBar a:visited {
+    color:#000000;
+    font-weight:normal;
+    font-size:12px;
+    margin:0px;
+    text-align:center;
+    border:1px solid #d1d1d1;
+    padding:6px;
+    text-decoration:none;
+    line-height:30px;
+}
+.nextPageBar a:hover, .vidNextPageBar a:hover {
+    background:#d1d1d1;
+}
+.selectedPage {
+    border:1px solid #d1d1d1;
+    color:#d1d1d1;
+    padding:6px;
+    font-size:12px;
+}
+.popular {
+    width:100%;
+    margin-top:27px;
+}
+.popular h1,.popular h2, .moreArticles h2 {
+    width:100%;
+    height:38px;
+    display:block;
+    background:#00a1ff;
+    text-align:center;
+    font-size:17px;
+    font-family:ProximanovaBold;
+    font-weight:normal;
+    line-height:40px;
+    text-transform:uppercase;
+    color:#fff;
+}
+.popular h1 {
+    background: url(../img/sprites.png) no-repeat 0 -672px;
+    width: 300px;
+    height: 84px;
+    position: relative;
+}
+.popular .heading ul {
+    margin:0;
+    padding:0;
+    list-style: none;
+    position: absolute;
+    top:23px;
+    left:50%;
+    right:50%;
+    width:100px;
+    margin-left:-50px;
+}
+.popular .heading li {
+    font-family:ProximanovaBold;
+    font-weight:normal;
+    color:#fff;
+    font-size:22px;
+    text-transform:uppercase;
+    line-height:25px;
+    padding:0;
+    margin:0;
+    height: auto;
+    text-align: left;
+}
+.popular .heading span {
+    font-family:ProximanovatLight !important;
+    padding:0;
+    margin:0;
+}
+.popular h2, .moreArticles h2 {
+    margin-top:12px;
+    font-family:Proximanova;
+    font-weight:normal;
+    background:#eaeaea;
+    font-size:12px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+.popular h2 a, .moreArticles h2 a {
+    color:#4b4b4b;
+    display:block;
+    width:100%;
+    height:100%;
+}
+.popular h2 a:hover, .moreArticles h2 a:hover {
+    color:#666;
+}
+.popular ul {
+    padding:10px 15px 15px 15px;
+    margin:0 0 0 0;
+    list-style:none;
+}
+.popular li {
+    width:100%;
+    height:95px;
+    position:relative;
+    margin-top:13px;
+}
+.popular .image {
+    width:114px;
+    height:69px;
+    background:#000;
+    position:absolute;
+    left:0;
+    top:0;
+}
+.popular .two {
+    height:169px;
+}
+.popular .two .image {
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.popular .two small {
+    background:url(../img/shade-pink.png);
+}
+.popular .two .data {
+    height:53px;
+    width:100%;
+    background:url(../img/shade.png);
+}
+.popular .two .data p {
+    padding:5px;
+    color:#fff;
+}
+.popular .two .data p a {
+    color:#fff;
+}
+.popular .data {
+    width:148px;
+    height:69px;
+    position:absolute;
+    right:0;
+    top:5px;
+}
+.popular .data p {
+    padding:0 0 0 0;
+    margin:0 0 0 0;
+    font-family:ProximanovatIta;
+    font-size:14px;
+    text-transform: uppercase;
+    line-height: 17px;
+}
+.popular .data p a {
+    color:#000;
+}
+.popular .data p a:hover {
+    color:#666;
+}
+.popular small {
+    display:block;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:21px;
+    background:#FB00B1;
+    color:#fff;
+    text-align:center;
+    color:#fff;
+    font-family:ProximanovaBold;
+    font-size:11px;
+    text-transform:uppercase;
+    line-height:22px;
+}
+.facebookBox {
+    width:300px;
+    height:300px;
+    margin-top: 27px;
+}
+.bottomPopular {
+    width:100%;
+    height:292px;
+    border-top:#f2f2f2 solid 1px;
+    border-bottom:#f2f2f2 solid 1px;
+    margin-top:29px;
+}
+.bottomPopular .headline,.sitesWelove .headline {
+    font-family:ProximanovaBold;
+    font-size:18px;
+    color:#000;
+    text-transform:uppercase;
+    width:100%;
+    display:block;
+    text-align:center;
+    font-weight:normal;
+    margin-top:24px;
+}
+.bottomPopular ul {
+    padding:30px 0 0 15px;
+    margin:0 0 0 0;
+    list-style:none;
+}
+.bottomPopular li {
+    width:194px;
+    float:left;
+    margin-right:57px;
+}
+.bottomPopular li:hover a {
+    color:#666;
+}
+.bottomPopular .image {
+    width:194px;
+    height:131px;
+    background:#ccc;
+}
+.bottomPopular h1 {
+    font-size:14px;
+    font-family:ProximanovatIta;
+    font-weight:normal;
+    text-transform:uppercase;
+    margin-top:15px;
+}
+.bottomPopular .last {
+    margin-right:0;
+}
+.bottomPopular a {
+    color:#000;
+}
+.bottomPopular a:hover {
+    color:#666;
+}
+.sitesWelove {
+    width:100%;
+    height:215px;
+    border-bottom:#f2f2f2 solid 1px;
+    text-align:center;
+}
+.sitesWelove img {
+    margin-top:30px;
+}
+.footer {
+    background:#000000;
+    width:100%;
+    height:207px;
+    margin-top: 35px;
+}
+.footer .logo {
+    background:url(../img/sprites.png) no-repeat -192px -161px;
+    width: 83px;
+    height: 46px;
+    margin-bottom:5px;
+    margin-left: 5px;
+}
+.footer .advert {
+    background: url(../img/sprites.png) no-repeat 0 -781px;
+    width: 253px;
+    height: 93px;
+   position:absolute;
+   top:-40px;
+   left:0;
+}
+.footer .publisher {
+    background: url(../img/sprites.png) no-repeat -253px -781px;
+    width: 253px;
+    height: 93px;
+   position:absolute;
+   top:-40px;
+   left:253px;
+}
+.footer .holder .columns .push {
+   margin-left:515px;
+}
+.footer .publisher a,.footer .advert a {
+    display: block;
+    width:100%;
+    height: 100%;
+    font-size: 1px;
+    text-indent: -999999px;
+}
+.footer .holder {
+    width:1000px;
+    margin:auto;
+    position:relative;
+}
+.footer .hotfix {
+    width:1023px;
+    height:207px;
+    background:#000000;
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+.footer .columns {
+    position:absolute;
+    left:11px;
+    top:18px;
+}
+.footer .links {
+    margin:0;
+    padding:0;
+    width:167px;
+    float:left;
+    list-style:none;
+}
+.footer .links li {
+    font-family:ProximanovaBold;
+    font-size:14px;
+    color:#FFFFFF;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    line-height:20px !important;
+}
+.footer .links a {
+    font-family:ProximanovatLight !important;
+    text-transform:none !important;
+    font-size:12px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:normal;
+}
+.footer .links a:hover {
+    color:#999;
+}
+.footer .copyright {
+    position:absolute;
+    right:11px;
+    top:23px;
+    font-family:ProximanovaBoldIta;
+    font-size:10px;
+    color:#FFFFFF;
+    font-weight:normal;
+    letter-spacing:0.5px;
+    text-align:right;
+    text-transform:uppercase;
+}
+.footer .copyright ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.footer .copyright li {
+    font-family:ProximanovatIta !important;
+    float:right;
+    line-height:20px !important;
+    color:#fff;
+    padding-left:5px;
+}
+.footer .copyright a {
+    color:#fff;
+    text-decoration:none;
+    text-transform:lowercase;
+    font-size:10px 
+}
+.footer .copyright a:hover {
+    color:#999;
+}
+.toDatop {
+    background:url(../img/sprites.png) no-repeat 0 -311px;
+    width:51px;
+    height:45px;
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+.toDatop:hover {
+    background:url(../img/sprites.png) no-repeat -65px -311px;
+}
+.toDatop a {
+    display:block;
+    width:100%;
+    height:100%;
+    text-indent:-99999px;
+    font-size: 1px;
+}
+/* ========================================================================== Helper classes ========================================================================== */
+/* * Image replacement */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+   /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 100%;
+}
+/* * Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+/* * Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+/* * Extends the .visuallyhidden class to allow the element to be focusable * when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+/* * Hide visually and from screenreaders, but maintain layout */
+.invisible {
+    visibility: hidden;
+}
+/* * Clearfix: contain floats * * For modern browsers * 1. The space content is one way to avoid an Opera bug when the * `contenteditable` attribute is included anywhere else in the document. * Otherwise it causes space to appear at the top and bottom of elements * that receive the `clearfix` class. * 2. The use of `table` rather than `block` is only necessary if using * `:before` to contain the top-margins of child elements. */
+.clearfix:before, .clearfix:after {
+    content: " ";
+   /* 1 */
+    display: table;
+   /* 2 */
+}
+.clearfix:after {
+    clear: both;
+}
+/* * For IE 6/7 only * Include this rule to trigger hasLayout and contain floats. */
+.clearfix {
+    *zoom: 1;
+}
+/* ========================================================================== EXAMPLE Media Queries for Responsive Design. Theses examples override the primary ('mobile first') styles. Modify as content requires. ========================================================================== */
+@media only screen and (min-width: 35em) {
+   /* Style adjustments for viewports that meet the condition */
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+   /* Style adjustments for high resolution devices */
+}
+/* ========================================================================== Print styles. Inlined to avoid required HTTP connection: h5bp.com/r ========================================================================== */
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+       /* Black prints faster: h5bp.com/s */
+        box-shadow:none !important;
+        text-shadow: none !important;
+   }
+    a, a:visited {
+        text-decoration: underline;
+   }
+    a[href]:after {
+        content: " (" attr(href) ")";
+   }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+   }
+   /* * Don't show links for images, or javascript/internal links */
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+        content: "";
+   }
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+   }
+    thead {
+        display: table-header-group;
+       /* h5bp.com/t */
+   }
+    tr, img {
+        page-break-inside: avoid;
+   }
+    img {
+        max-width: 100% !important;
+   }
+    @page {
+        margin: 0.5cm;
+   }
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+   }
+    h2, h3 {
+        page-break-after: avoid;
+   }
+}
+* {
+   outline:none
+}
+a {
+   outline:none
+}
